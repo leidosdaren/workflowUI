@@ -3,3 +3,4 @@ environment.prod.ts
 environment.ts
 .env.dev
 environments/environment.ts
+.angular
