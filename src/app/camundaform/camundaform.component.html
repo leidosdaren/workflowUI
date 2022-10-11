@@ -1,3 +1,12 @@
 Form <br />
 
-Some form: {{ camundaFormJSON.form.id }}
+<ul>
+    <li *ngFor="let component of jsonComponents.components">{{ component.label }}</li> 
+</ul>
+
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit(model)">
+    <formly-form [model]="model" [fields]="fields" [options]="options" [form]="form">
+    </formly-form>
+    <button type="submit" class="mat-button">Submit</button>
+  </form>

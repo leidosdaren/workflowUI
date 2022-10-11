@@ -1,0 +1,10 @@
+{
+    "/api": {
+      "target": "https://dsm-1.tasklist.camunda.io/daae4980-e22b-4299-b78f-308ec8ffbab2/graphql",
+      "secure": true,
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/api": ""
+      }
+    }
+  }

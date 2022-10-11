@@ -1,0 +1,13 @@
+schema: 
+  - https://dsm-1.tasklist.camunda.io/daae4980-e22b-4299-b78f-308ec8ffbab2/graphql:
+      headers:
+        Authorization: "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlFVVXdPVFpDUTBVM01qZEVRME0wTkRFelJrUkJORFk0T0RZeE1FRTBSa1pFUlVWRVF6bERNZyJ9.eyJodHRwczovL2NhbXVuZGEuY29tL29yZ0lkIjoiMGQ5MzY1YjEtNWU1OC00NmExLTgwN2YtYWU2YTdjMzM3N2NkIiwiaXNzIjoiaHR0cHM6Ly93ZWJsb2dpbi5jbG91ZC5jYW11bmRhLmlvLyIsInN1YiI6Im13bzkwdDJyMzE2MDd6MzZCTkg2OXRXRktCWDU1ajFXQGNsaWVudHMiLCJhdWQiOiJ0YXNrbGlzdC5jYW11bmRhLmlvIiwiaWF0IjoxNjY0NzE1ODQ2LCJleHAiOjE2NjQ4MDIyNDYsImF6cCI6Im13bzkwdDJyMzE2MDd6MzZCTkg2OXRXRktCWDU1ajFXIiwic2NvcGUiOiJkYWFlNDk4MC1lMjJiLTQyOTktYjc4Zi0zMDhlYzhmZmJhYjIiLCJndHkiOiJjbGllbnQtY3JlZGVudGlhbHMifQ.Afqwqs6dF-q9zZii-Ba4dVs7Hp3nUkewZWMlgL4bfKwz60uR9Jqvd2ZQd5rMQ5AylICB_scmLGmhA2UXR0hOHd1cfZRKLPe7M1kf8qln7CPJcjvq0N4_N8Be2qOj4NO6ugXf8xBhRm6UXTc1g6WlvBWiM1WIXb6CTT8h0NMpkTjq1yTjL53fjsKSYgAX5Gynanr5dvpKZIv5XBxZDeZg_H2TrR4M2j9y35sG_4S56y-XBY_qc5kRljezAp9JxDgDK38_LSZuu_ogvzsnhbeLLPt94pJAkg283LCn56AofUJ4X0oMyaxX6pB8_Fs4hRex4YobFFD6uK9JZ0-4gNdv2g"
+documents: './getform.graphql'
+generates:
+  ./graphql/generated.ts:
+    config:
+      withHooks: true
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-apollo-angular
