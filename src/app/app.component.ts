@@ -1,10 +1,26 @@
-import { Component, VERSION } from '@angular/core';
+
+import { Component } from '@angular/core';
+import { FormGroup } from '@angular/forms';
+import { FormlyFormOptions, FormlyFieldConfig } from '@ngx-formly/core';
 
 @Component({
-  selector: 'my-app',
+  selector: 'formly-app-example',
   templateUrl: './app.component.html',
-  styleUrls: [ './app.component.css' ]
 })
-export class AppComponent  {
-  name = 'Angular ' + VERSION.major;
+export class AppComponent {
+  form = new FormGroup({});
+  model: any = {};
+  options: FormlyFormOptions = {};
+  fields: FormlyFieldConfig[] = [
+    {
+      key: 'Input',
+      type: 'input',
+      props: {
+        label: 'Input',
+        placeholder: 'Placeholder',
+        description: 'Description',
+        required: true,
+      },
+    },
+  ];
 }

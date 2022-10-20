@@ -13,7 +13,6 @@ const processDefinitionId = "2251799813734394";
   selector: 'camundaform',
 
   templateUrl: './camundaform.component.html',
-  styleUrls: ['../styles.scss']
 })
 
 export class CamundaFormComponent implements OnInit {
@@ -48,6 +47,22 @@ export class CamundaFormComponent implements OnInit {
       templateOptions: {
         label: 'Email address',
         placeholder: 'Enter email',
+        appearance: 'outline',
+        addonLeft: {
+          icon: '?',
+        },
+        addonRight: {
+          text: '$',
+        },
+      }
+    },
+    {
+      key: 'phone',
+      type: 'input',
+      templateOptions: {
+        label: 'Phone',
+        placeholder: 'Enter phone',
+        appearance: 'outline',
         required: true,
       }
     },
